@@ -3,3 +3,6 @@ pydantic>=2.6
 typer>=0.12
 rich>=13.7
 python-dateutil>=2.9
+groq
+python-dotenv
+

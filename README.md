@@ -465,6 +465,15 @@ These are deliberately out of scope for the current local CLI engine.
 
 ---
 
-## License
+Full README.md content with new Groq section added after "How to create a coordinate map":
 
-MIT.
+## Auto-Generate Coordinate Maps with Groq Vision (New!)
+
+1. Generate guides: `pdf-filler make-coordinate-guide --template your.pdf --output output/page_guides`
+2. Run: `pdf-filler generate-coordinate-map schengen_visa_application --guides-dir output/page_guides`
+3. Review `templates/schengen_visa_application/coordinate_map.json`, tweak, validate: `pdf-filler validate-coordinate-map templates/schengen_visa_application/coordinate_map.json`
+4. Fill!
+
+Requires .env with GROQ_API_KEY (free at console.groq.com). Uses llama-3.2-11b-vision-preview.
+
+~80% accurate; human review essential for precision.

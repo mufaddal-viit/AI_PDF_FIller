@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "PDF Filler Maintainers" }]
-keywords = ["pdf", "schengen", "form", "filler", "pymupdf", "fitz"]
+keywords = ["pdf", "schengen", "form", "filler", "pymupdf", "fitz", "groq", "vision"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
@@ -25,6 +25,8 @@ dependencies = [
     "pydantic>=2.6",
     "typer>=0.12",
     "rich>=13.7",
+    "groq",
+    "python-dotenv",
 ]
 
 [project.optional-dependencies]
@@ -35,6 +37,10 @@ dev = [
     "mypy>=1.10",
     "pre-commit>=3.7",
     "python-dateutil>=2.9",
+]
+groq = [
+    "groq",
+    "python-dotenv",
 ]
 
 [project.scripts]
@@ -60,18 +66,18 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
-    "C4",  # flake8-comprehensions
-    "SIM", # flake8-simplify
-    "RUF", # ruff-specific
+    "E",
+    "W",
+    "F",
+    "I",
+    "B",
+    "UP",
+    "C4",
+    "SIM",
+    "RUF",
 ]
 ignore = [
-    "E501",  # line too long (handled by formatter)
+    "E501",
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -104,5 +110,6 @@ no_implicit_optional = true
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["fitz", "pymupdf"]
+module = ["fitz", "pymupdf", "groq"]
 ignore_missing_imports = true
+
