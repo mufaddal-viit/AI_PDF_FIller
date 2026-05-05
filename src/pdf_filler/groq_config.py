@@ -16,7 +16,6 @@ class GroqSettings(BaseSettings):
 
     groq_api_key: str
     model: str = "meta-llama/llama-4-scout-17b-16e-instruct"
-    base_url: str = "https://api.groq.com/openai/v1"
     temperature: float = 0.1
     max_retries: int = 3
 

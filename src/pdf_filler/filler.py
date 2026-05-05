@@ -388,6 +388,7 @@ class PdfFiller:
             required=cfg.required,
             font=cfg.font,
             font_size=cfg.font_size,
+            min_font_size=cfg.min_font_size,
             align=cfg.align,
             max_width=cfg.max_width,
             overflow=cfg.overflow,

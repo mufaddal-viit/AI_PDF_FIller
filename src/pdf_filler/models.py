@@ -120,6 +120,7 @@ class DateFieldConfig(_BaseField):
     format: str = "%d-%m-%Y"
     max_width: PositiveFloat | None = None
     overflow: OverflowStrategy = "error"
+    min_font_size: PositiveFloat = 6.0
     color: tuple[float, float, float] = (0.0, 0.0, 0.0)
 
 

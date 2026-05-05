@@ -211,22 +211,27 @@ def generate_coordinate_map_cmd(
     output_dir: Annotated[Path, typer.Option(help="Output root; writes {template_id}/coordinate_map.json.")] = Path("templates"),
     version: Annotated[str, typer.Option(help="Version string embedded in the map.")] = "auto-v1",
     page_size: Annotated[str, typer.Option(help="Page size reported in the map (A4, Letter, …).")] = "A4",
+    max_pages: Annotated[
+    int | None,
+    typer.Option(help="Maximum number of guide pages to process. If omitted, all pages are processed.", min=1),] = None,
+    provider: Annotated[
+    str | None,
+    typer.Option(help='Vision provider: "groq" or "openai". Overrides VISION_PROVIDER env var.'),] = None,
     verbose: VerboseOpt = False,
 ) -> None:
-    """Auto-generate coordinate_map.json via Groq vision on page-guide PNGs."""
+    """Auto-generate coordinate_map.json via a vision LLM on page-guide PNGs."""
     _bootstrap_logging(verbose)
 
-    # Lazy import — only load Groq modules when this command is actually invoked.
     try:
         from .groq_vision import generate_coordinate_map as _gen_map  # noqa: PLC0415
     except ImportError as exc:
-        _abort(f"Groq dependencies not installed: {exc}")
+        _abort(f"Vision dependencies not installed: {exc}")
 
     if not Path(".env").exists():
-        _abort(".env missing; copy .env.example and add GROQ_API_KEY.")
+        _abort(".env missing; copy .env.example and add GROQ_API_KEY / OPENAI_API_KEY.")
 
     try:
-        coord_map = _gen_map(template_id, guides_dir, version, page_size)
+        coord_map = _gen_map(template_id, guides_dir, version, page_size, max_pages=max_pages, provider=provider)
 
         out_dir = output_dir / template_id
         out_dir.mkdir(exist_ok=True, parents=True)

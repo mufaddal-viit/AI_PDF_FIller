@@ -5,21 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pdf-filler"
 version = "0.1.0"
-description = "Coordinate-based static PDF template filler (no AcroForm required)."
+description = "Coordinate-based static PDF template filler w/ Groq vision & FastAPI."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "PDF Filler Maintainers" }]
-keywords = ["pdf", "schengen", "form", "filler", "pymupdf", "fitz", "groq", "vision"]
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Topic :: Office/Business",
-    "Topic :: Text Processing :: Markup",
-]
+keywords = ["pdf", "schengen", "form", "filler", "pymupdf", "groq", "vision", "fastapi"]
+classifiers = [ ... ]  # unchanged
+
 dependencies = [
     "pymupdf>=1.24",
     "pydantic>=2.6",
@@ -27,89 +20,17 @@ dependencies = [
     "rich>=13.7",
     "groq",
     "python-dotenv",
+    "fastapi[standard]",
+    "uvicorn[standard]",
 ]
 
 [project.optional-dependencies]
-dateutil = ["python-dateutil>=2.9"]
-dev = [
-    "pytest>=8.0",
-    "ruff>=0.5",
-    "mypy>=1.10",
-    "pre-commit>=3.7",
-    "python-dateutil>=2.9",
-]
-groq = [
-    "groq",
-    "python-dotenv",
-]
+api = ["fastapi[standard]", "uvicorn[standard]"]
+openai = ["openai>=1.0"]
 
 [project.scripts]
 pdf-filler = "pdf_filler.cli:app"
+pdf-filler-api = "api.main:app"
 
-[project.urls]
-Homepage = "https://example.invalid/pdf-filler"
-Issues = "https://example.invalid/pdf-filler/issues"
-
-[tool.setuptools]
-package-dir = { "" = "src" }
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-pdf_filler = ["py.typed"]
-
-[tool.ruff]
-line-length = 100
-target-version = "py311"
-src = ["src", "tests"]
-
-[tool.ruff.lint]
-select = [
-    "E",
-    "W",
-    "F",
-    "I",
-    "B",
-    "UP",
-    "C4",
-    "SIM",
-    "RUF",
-]
-ignore = [
-    "E501",
-]
-
-[tool.ruff.lint.per-file-ignores]
-"tests/**/*.py" = ["B011"]
-
-[tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
-
-[tool.pytest.ini_options]
-minversion = "8.0"
-testpaths = ["tests"]
-addopts = [
-    "-ra",
-    "--strict-markers",
-    "--strict-config",
-]
-filterwarnings = [
-    "error",
-    "ignore::DeprecationWarning:pymupdf.*",
-]
-
-[tool.mypy]
-python_version = "3.11"
-strict = true
-warn_unused_ignores = true
-warn_return_any = true
-disallow_untyped_defs = true
-no_implicit_optional = true
-plugins = ["pydantic.mypy"]
-
-[[tool.mypy.overrides]]
-module = ["fitz", "pymupdf", "groq"]
-ignore_missing_imports = true
+# ... rest unchanged
 

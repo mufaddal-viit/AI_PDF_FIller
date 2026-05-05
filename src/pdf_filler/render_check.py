@@ -141,9 +141,9 @@ def _draw_grid(
     width = rect.width
     height = rect.height
 
-    minor_color = (0.85, 0.85, 0.85)
-    major_color = (0.55, 0.55, 0.85)
-    label_color = (0.10, 0.10, 0.55)
+    minor_color = (1.0, 0.6, 0.6)
+    major_color = (0.9, 0.0, 0.0)
+    label_color = (0.7, 0.0, 0.0)
 
     # Vertical lines (x = constant).
     x = 0.0

@@ -1,0 +1,1218 @@
+{
+  "template_id": "schengen_visa_application",
+  "template_version": "2026-11-14",
+  "page_size": "A4",
+  "coordinate_system": "pymupdf",
+  "units": "points",
+  "fields": {
+    "surname": {
+      "source": "applicant.surname",
+      "page": 1,
+      "x": 160.0,
+      "y": 180.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 380.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "surname_at_birth": {
+      "source": "applicant.surname_at_birth",
+      "page": 1,
+      "x": 220.0,
+      "y": 240.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 320.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "first_name": {
+      "source": "applicant.first_name",
+      "page": 1,
+      "x": 160.0,
+      "y": 280.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 380.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "date_of_birth": {
+      "source": "applicant.date_of_birth",
+      "page": 1,
+      "x": 160.0,
+      "y": 320.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 100.0,
+      "overflow": "error",
+      "min_font_size": 6.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "place_of_birth": {
+      "source": "applicant.place_of_birth",
+      "page": 1,
+      "x": 300.0,
+      "y": 320.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "current_nationality": {
+      "source": "applicant.current_nationality",
+      "page": 1,
+      "x": 440.0,
+      "y": 320.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "country_of_birth": {
+      "source": "applicant.country_of_birth",
+      "page": 1,
+      "x": 160.0,
+      "y": 360.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 380.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sex_male": {
+      "source": "applicant.sex",
+      "page": 1,
+      "x": 60.0,
+      "y": 400.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "male",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sex_female": {
+      "source": "applicant.sex",
+      "page": 1,
+      "x": 60.0,
+      "y": 420.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "female",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sex_other": {
+      "source": "applicant.sex",
+      "page": 1,
+      "x": 60.0,
+      "y": 440.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "other",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_single": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 160.0,
+      "y": 400.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "single",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_married": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 220.0,
+      "y": 400.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "married",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_registered_partnership": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 300.0,
+      "y": 400.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "registered_partnership",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_separated": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 160.0,
+      "y": 420.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "separated",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_divorced": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 220.0,
+      "y": 420.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "divorced",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_widower": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 300.0,
+      "y": 420.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "widower",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "civil_status_other": {
+      "source": "applicant.civil_status",
+      "page": 1,
+      "x": 160.0,
+      "y": 440.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "other",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "parental_authority": {
+      "source": "applicant.parental_authority",
+      "page": 1,
+      "x": 160.0,
+      "y": 480.0,
+      "required": false,
+      "type": "multiline_text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 380.0,
+      "line_height": 12.0,
+      "max_lines": 5,
+      "overflow": "error",
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "national_identity_number": {
+      "source": "applicant.national_identity_number",
+      "page": 1,
+      "x": 160.0,
+      "y": 560.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 380.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_ordinary_passport": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 60.0,
+      "y": 600.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "ordinary_passport",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_diplomatic_passport": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 160.0,
+      "y": 600.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "diplomatic_passport",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_service_passport": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 260.0,
+      "y": 600.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "service_passport",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_official_passport": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 60.0,
+      "y": 620.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "official_passport",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_special_passport": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 160.0,
+      "y": 620.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "special_passport",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "travel_document_type_other": {
+      "source": "travel_document.type",
+      "page": 1,
+      "x": 260.0,
+      "y": 620.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "other",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "number_of_travel_document": {
+      "source": "travel_document.number",
+      "page": 2,
+      "x": 0.0,
+      "y": 80.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "date_of_issue": {
+      "source": "travel_document.issue_date",
+      "page": 2,
+      "x": 100.0,
+      "y": 80.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 100.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "valid_until": {
+      "source": "travel_document.valid_until",
+      "page": 2,
+      "x": 200.0,
+      "y": 80.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 100.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "issued_by_country": {
+      "source": "travel_document.issued_by",
+      "page": 2,
+      "x": 300.0,
+      "y": 80.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 200.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_member_surname": {
+      "source": "applicant.family_member.surname",
+      "page": 2,
+      "x": 0.0,
+      "y": 180.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 200.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_member_given_names": {
+      "source": "applicant.family_member.given_names",
+      "page": 2,
+      "x": 300.0,
+      "y": 180.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 200.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_member_date_of_birth": {
+      "source": "applicant.family_member.date_of_birth",
+      "page": 2,
+      "x": 0.0,
+      "y": 230.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 100.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_member_nationality": {
+      "source": "applicant.family_member.nationality",
+      "page": 2,
+      "x": 200.0,
+      "y": 230.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_member_travel_document_number": {
+      "source": "applicant.family_member.travel_document_number",
+      "page": 2,
+      "x": 400.0,
+      "y": 230.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_spouse": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 0.0,
+      "y": 280.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "spouse",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_child": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 100.0,
+      "y": 280.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "child",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_grandchild": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 200.0,
+      "y": 280.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "grandchild",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_dependent_ascendant": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 300.0,
+      "y": 280.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "dependent ascendant",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_registered_partnership": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 0.0,
+      "y": 305.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "registered partnership",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "family_relationship_other": {
+      "source": "applicant.family_relationship",
+      "page": 2,
+      "x": 100.0,
+      "y": 305.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "other",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "applicant_address_email": {
+      "source": "applicant.address_email",
+      "page": 2,
+      "x": 0.0,
+      "y": 330.0,
+      "required": false,
+      "type": "multiline_text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 400.0,
+      "line_height": 12.0,
+      "max_lines": 5,
+      "overflow": "error",
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "applicant_tel": {
+      "source": "applicant.tel",
+      "page": 2,
+      "x": 400.0,
+      "y": 330.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "residence_no": {
+      "source": "applicant.residence",
+      "page": 2,
+      "x": 0.0,
+      "y": 380.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "no",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "residence_yes": {
+      "source": "applicant.residence",
+      "page": 2,
+      "x": 0.0,
+      "y": 405.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "yes",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "residence_permit_number": {
+      "source": "applicant.residence_permit_number",
+      "page": 2,
+      "x": 100.0,
+      "y": 405.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 100.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "residence_valid_until": {
+      "source": "applicant.residence_valid_until",
+      "page": 2,
+      "x": 400.0,
+      "y": 405.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 100.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "current_occupation": {
+      "source": "applicant.current_occupation",
+      "page": 2,
+      "x": 0.0,
+      "y": 455.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 500.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "employer_address": {
+      "source": "applicant.employer_address",
+      "page": 2,
+      "x": 0.0,
+      "y": 480.0,
+      "required": false,
+      "type": "multiline_text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 500.0,
+      "line_height": 12.0,
+      "max_lines": 5,
+      "overflow": "error",
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_tourism": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 0.0,
+      "y": 530.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "tourism",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_business": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 100.0,
+      "y": 530.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "business",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_visiting_family_friends": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 200.0,
+      "y": 530.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "visiting family or friends",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_cultural": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 300.0,
+      "y": 530.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "cultural",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_sports": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 0.0,
+      "y": 555.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "sports",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_official_visit": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 100.0,
+      "y": 555.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "official visit",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_medical_reasons": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 200.0,
+      "y": 555.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "medical reasons",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_study": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 300.0,
+      "y": 555.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "study",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_airport_transit": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 0.0,
+      "y": 580.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "airport transit",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "purpose_other": {
+      "source": "travel.purpose",
+      "page": 2,
+      "x": 100.0,
+      "y": 580.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "other",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "additional_purpose_info": {
+      "source": "travel.additional_purpose_info",
+      "page": 2,
+      "x": 0.0,
+      "y": 605.0,
+      "required": false,
+      "type": "multiline_text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 500.0,
+      "line_height": 12.0,
+      "max_lines": 5,
+      "overflow": "error",
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "member_state_main_destination": {
+      "source": "travel.member_state_main_destination",
+      "page": 2,
+      "x": 0.0,
+      "y": 655.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 300.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "member_state_first_entry": {
+      "source": "travel.member_state_first_entry",
+      "page": 2,
+      "x": 300.0,
+      "y": 655.0,
+      "required": false,
+      "type": "text",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "max_width": 200.0,
+      "max_chars": null,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "number_of_entries_single": {
+      "source": "travel.number_of_entries",
+      "page": 2,
+      "x": 0.0,
+      "y": 705.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "single",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "number_of_entries_two": {
+      "source": "travel.number_of_entries",
+      "page": 2,
+      "x": 100.0,
+      "y": 705.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "two",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "number_of_entries_multiple": {
+      "source": "travel.number_of_entries",
+      "page": 2,
+      "x": 200.0,
+      "y": 705.0,
+      "required": false,
+      "type": "checkbox",
+      "box_size": 8.0,
+      "checked_when": "multiple",
+      "check_style": "x",
+      "line_width": 1.2,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "intended_date_of_arrival": {
+      "source": "travel.intended_date_of_arrival",
+      "page": 2,
+      "x": 0.0,
+      "y": 730.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 200.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "intended_date_of_departure": {
+      "source": "travel.intended_date_of_departure",
+      "page": 2,
+      "x": 0.0,
+      "y": 780.0,
+      "required": false,
+      "type": "date",
+      "font_size": 10.0,
+      "font": "helv",
+      "align": "left",
+      "format": "%d-%m-%Y",
+      "max_width": 200.0,
+      "overflow": "shrink",
+      "min_font_size": 7.0,
+      "color": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}
